@@ -1,0 +1,1 @@
+function reveal(){overlay.classList.toggle("visible")}var searchButton=document.getElementById("search-button"),overlay=document.getElementById("search-overlay");

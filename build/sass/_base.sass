@@ -1,2 +1,115 @@
+//
+// Variables //
+//
+
+// Primary Colours
+$black: #333
+$grey: #6d6d6d
+$red: #da0b00
+$turq: #158e93
+$light-pink: rgba(255, 100, 100, 0.1)
+$shadow-grey: rgba(109,109,109, 0.7)
+
+// Media Breakpoints
+$tiny: "only screen and (max-width:300px)"
+$small-phone: "only screen and (max-width:512px)"
+$medium-tablet: "only screen and (max-width:850px)"
+$large-screen: "only screen and (min-width:1440px)"
+
+//
+// Mixins //
+//
+
+// Home-Page Module Hover Mixin
+=moduleHover
+  cursor: pointer
+  .secondary-text
+    color: $red
+    transition: color .15s ease-in
+  .primary-text:after
+    width: 100%
+  .primary-module-image
+    filter: grayscale(0) contrast(1.2)
+    img
+      transform: scale(1.01)
+
+// Footer Menu Hover Mixin
+=menu-hover
+  .menu-link
+    color: $grey
+    cursor: pointer
+  .menu-link:after
+    width: 100%
+
+//
+// Animations //
+//
+
+@keyframes dash
+  50%
+    stroke-dashoffset: 1000
+  100%
+    stroke-dashoffset: 0
+
+//
+// Base Styles & Resets //
+//
+
+*
+  box-sizing: border-box
+
+html
+  font-size: 22px
+  @media #{$medium-tablet}
+    font-size: 20px
+  @media #{$small-phone}
+    font-size: 17px
+  @media #{$tiny}
+    font-size: 15px
+
+
 body
   margin: 0
+  font-family: 'Roboto Condensed', 'Roboto', Helvetica Neue, Arial, sans-serif
+  color: $black
+
+a
+  text-decoration: none
+  color: $black
+
+//
+// Default Text Styling //
+//
+.primary-text
+  padding: 20px 20px 10px 20px
+  font-size: 1.4rem
+  line-height: 1.7rem
+  letter-spacing: 4px
+  color: $black
+  @media #{$small-phone}
+    padding: 15px 10px 5px 10px
+    font-size: 1.1rem
+    letter-spacing: 1px
+
+.primary-text:after
+  display: block
+  position: relative
+  left: 0
+  bottom: -3px
+  width: 0
+  height: 3px
+  background-color: $red
+  content: ''
+  transition: width 0.3s
+
+.secondary-text
+  padding: 10px 20px 20px
+  color: $grey
+  font-size: 0.6rem
+  line-height: 0.9rem
+  letter-spacing: 2px
+  word-spacing: 1px
+  @media #{$small-phone}
+    padding: 10px 20px 10px
+    font-size: 0.7rem
+    letter-spacing: 1px
