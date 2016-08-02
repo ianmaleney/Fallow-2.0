@@ -88,21 +88,29 @@
   position: fixed
   top: 0
   left: 0
+  width: 100vw
+  height: calc(100vh - 120px)
   transform: translate(0, 101vh)
   opacity: 0
   transition: transform 0.3s ease-in, opacity 0.3s ease-in
-  width: 100vw
-  height: 100vh
-  background-color: rgba(10, 10, 10, 0.9)
   color: white
   will-change: transform
+  display: flex
+  justify-content: center
+  align-items: center
+  @media #{$medium-tablet}
+    height: calc(100vh - 160px)
+
+  .overlay-background
+    width: 100vw
+    height: 100vh
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(10, 10, 10, 0.9)
+    z-index: -2
+
   .search-wrapper
-    display: flex
-    height: calc(100vh - 120px)
-    justify-content: center
-    align-items: center
-    @media #{$medium-tablet}
-      height: calc(100vh - 160px)
     form
       width: 70vw
       height: 10vh

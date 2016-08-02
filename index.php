@@ -39,7 +39,7 @@
                   srcset="' . $posts["leadimage"] . '-mds.jpg 850w,
                    ' . $posts["leadimage"] . '-mls.jpg 850w,
                    ' . $posts["leadimage"] . '-l.jpg 1440w"
-                   sizes="(min-width: 850px) 50vw, 100vw"
+                   sizes="(min-width: 850px) 100vw"
                    alt="' . $posts["title"] . '">
                 <div class="gradient"></br></div>
               </div>
@@ -56,7 +56,12 @@
               <div class="primary-image-wrapper"></div>
               <a href="' . $posts["body"] . '" target="_blank" class="primary-module-link">
                 <div class="primary-module-image">
-                  <img src="' . $posts["leadimage"] . '">
+                <img src="' . $posts["leadimage"] . '-sm.jpg"
+                  srcset="' . $posts["leadimage"] . '-mds.jpg 850w,
+                   ' . $posts["leadimage"] . '-mls.jpg 850w,
+                   ' . $posts["leadimage"] . '-l.jpg 1440w"
+                   sizes="(min-width: 850px) 50vw, 100vw"
+                   alt="' . $posts["title"] . '">
                   <div class="gradient"></br></div>
                 </div>
                 <div class="primary-module-text-container">
@@ -70,6 +75,7 @@
     </div>
     <!-- Search Splash-->
     <div id="search-overlay" class="search-splash">
+      <div class="overlay-background" onclick="reveal()"></div>
       <div class="search-wrapper">
         <form id="search-form" action="http://www.fallowmedia.com/searchresults.php" method="get">
           <input class="search-text-area" type="text" aria-labelledby="search-form" placeholder="..." Name="keywords" autocomplete="off">
