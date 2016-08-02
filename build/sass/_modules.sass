@@ -106,15 +106,48 @@
     form
       width: 70vw
       height: 10vh
-      input
-        width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: center
+      .search-text-area
+        width: 80%
         height: 100%
-        font-size: 1.8rem
+        font-size: 1.4rem
         padding: 10px
+        text-transform: uppercase
+        letter-spacing: 2px
         @media #{$small-phone}
-          font-size: 1.2rem
-        &:focus
-          outline: 5px solid $turq
+          font-size: 1rem
+          width: 70%
+      .search-input
+        width: 20%
+        height: 10vh
+        font-size: 1.2rem
+        background-color: white
+        border: none
+        text-transform: uppercase
+        letter-spacing: 2px
+        &:after
+          display: block
+          position: relative
+          left: 1.13vw
+          bottom: -3px
+          width: 0
+          height: 3px
+          background-color: $red
+          content: ''
+          transition: width 0.3s
+        @media #{$medium-tablet}
+          font-size: 0.8rem
+        @media #{$small-phone}
+          width: 35%
+        &:hover
+          color: white
+          background-color: #111
+          cursor: pointer
+          &:after
+            width: calc(90% - 1.13vw)
+
 
 
 
@@ -128,7 +161,6 @@
   display: flex
   justify-content: space-between
   align-items: center
-  box-shadow: 0px -1px 1px -1px $shadow-grey
   @media #{$medium-tablet}
     justify-content: space-between
     flex-wrap: wrap
@@ -209,6 +241,8 @@
     box-sizing: content-box
     fill: white
     padding: 0 10px
+    circle
+      fill: white
     @media #{$medium-tablet}
       padding: 8px
       height: 40px
@@ -219,3 +253,53 @@
     &:hover
       fill: $red
       cursor: pointer
+      circle
+        fill: $red
+
+//
+//
+// Admin Input Page //
+//
+//
+.admin-input
+  p
+    text-align: center
+    background-color: aliceblue
+    padding: 40px
+    max-width: 770px
+    margin-left: calc(50% - 385px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    border-radius: 20px
+    font-family: Roboto, Helvetica, Arial
+    font-size: 0.8rem
+
+  label
+    color: #686892
+    padding: 10px
+
+  input
+    display: block
+    width: 500px
+    height: 2rem
+    font-size: 0.8rem
+    padding-left: 20px
+    margin-top: 10px
+    margin-bottom: 10px
+    border-radius: 5px
+
+  #submit
+    height: 2rem
+    color: #686892
+    background-color: rgba(251, 203, 82, 0.74)
+    border: none
+    box-shadow: 0 5px 8px rgba(150,150,150, 1)
+    transition: box-shadow 0.15s ease-in
+
+  #submit:hover
+    background-color: #686892
+    color: rgba(251, 203, 82, 1)
+    cursor: pointer
+    box-shadow: 0 10px 10px -3px rgba(150,150,150, 0.6)
