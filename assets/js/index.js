@@ -7,6 +7,20 @@ function reveal(){
   overlay.classList.toggle("visible");
 }
 
+// AJAX Loading for Initial Images
+$(function () {
+  $("[data-lazy-load-image]").each(function (index, element) {
+      var img = new Image();
+      var source = $(element).data("lazy-load-image");
+      var alt = $(element).data("alt");
+      img.src = source + '-sm.jpg';
+      img.srcset = source.concat('-mds.jpg 850w ,') + source.concat('-mls.jpg 850w ,') + source.concat('-l.jpg 1440w ,');
+      img.alt = alt;
+      img.sizes = "(min-width: 850px) 50vw, 100vw"
+      $(element).prepend(img);
+  });
+});
+
 // AJAX Loading for Extra Posts
 
 $(document).ready(function() {

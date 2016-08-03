@@ -34,13 +34,10 @@
           '<div class="primary-module-wrapper">
             <div class="primary-image-wrapper"></div>
             <a href="' . $posts["body"] . '" target="_blank" class="primary-module-link">
-              <div class="primary-module-image">
-                <img src="' . $posts["leadimage"] . '-sm.jpg"
-                  srcset="' . $posts["leadimage"] . '-mds.jpg 850w,
-                   ' . $posts["leadimage"] . '-mls.jpg 850w,
-                   ' . $posts["leadimage"] . '-l.jpg 1440w"
-                   sizes="(min-width: 850px) 100vw"
-                   alt="' . $posts["title"] . '">
+              <div class="primary-module-image" data-lazy-load-image="' . $posts["leadimage"] . '" data-alt="' . $posts["title"] .' ">
+                <noscript>
+                  <img src="' . $posts["leadimage"] . '-mls.jpg">
+                </noscript>
                 <div class="gradient"></br></div>
               </div>
               <div class="primary-module-text-container">
@@ -55,15 +52,12 @@
             '<div class="primary-module-wrapper">
               <div class="primary-image-wrapper"></div>
               <a href="' . $posts["body"] . '" target="_blank" class="primary-module-link">
-                <div class="primary-module-image">
-                <img src="' . $posts["leadimage"] . '-sm.jpg"
-                  srcset="' . $posts["leadimage"] . '-mds.jpg 850w,
-                   ' . $posts["leadimage"] . '-mls.jpg 850w,
-                   ' . $posts["leadimage"] . '-l.jpg 1440w"
-                   sizes="(min-width: 850px) 50vw, 100vw"
-                   alt="' . $posts["title"] . '">
-                  <div class="gradient"></br></div>
-                </div>
+              <div class="primary-module-image" data-lazy-load-image="' . $posts["leadimage"] . '" data-alt="' . $posts["title"] .' ">
+                <noscript>
+                  <img src="' . $posts["leadimage"] . '-mls.jpg">
+                </noscript>
+                <div class="gradient"></br></div>
+              </div>
                 <div class="primary-module-text-container">
                   <div class="primary-text">' . $posts["title"] . '</div>
                   <div class="secondary-text">' . $posts["description"] . '</div>
