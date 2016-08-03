@@ -496,6 +496,49 @@ footer {
       .social svg:hover circle {
         fill: #da0b00; }
 
+.about-page-container {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.5px;
+  color: #222;
+  padding: 50px 0 0 0; }
+  .about-page-container .contact-section {
+    max-width: calc(100vw - 760px); }
+    @media only screen and (max-width: 850px) {
+      .about-page-container .contact-section .logo {
+        padding: 15px 0;
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2; } }
+    .about-page-container .contact-section .logo svg {
+      fill: none;
+      stroke-width: 6;
+      stroke: #222;
+      width: 120px;
+      height: 120px;
+      -webkit-transform: stroke 1s ease-in;
+          -ms-transform: stroke 1s ease-in;
+              transform: stroke 1s ease-in; }
+      @media only screen and (max-width: 512px) {
+        .about-page-container .contact-section .logo svg {
+          -webkit-transform: scale(0.8);
+              -ms-transform: scale(0.8);
+                  transform: scale(0.8); } }
+      .about-page-container .contact-section .logo svg:hover {
+        stroke: #da0b00;
+        stroke-dasharray: 150;
+        -webkit-animation: dash 5s infinite linear;
+                animation: dash 5s infinite linear;
+        cursor: pointer; }
+    .about-page-container .contact-section ul {
+      padding: 40px 0; }
+    .about-page-container .contact-section li {
+      list-style: none;
+      margin-left: -20px; }
+  .about-page-container .about-section {
+    max-width: 760px; }
+
 .admin-input p {
   text-align: center;
   background-color: aliceblue;

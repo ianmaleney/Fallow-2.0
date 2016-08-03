@@ -265,6 +265,47 @@
       circle
         fill: $red
 
+
+//
+//
+// About Page //
+//
+//
+.about-page-container
+  font-size: 1rem
+  line-height: 1.3rem
+  letter-spacing: 0.5px
+  color: $black
+  padding: 50px 0 0 0
+  .contact-section
+    max-width: calc(100vw - 760px)
+    .logo
+      @media #{$medium-tablet}
+        padding: 15px 0
+        order: 2
+      svg
+        fill: none
+        stroke-width: 6
+        stroke: $black
+        width: 120px
+        height: 120px
+        transform: stroke 1s ease-in
+        @media #{$small-phone}
+          transform: scale(0.8)
+        &:hover
+          stroke: $red
+          stroke-dasharray: 150
+          animation: dash 5s infinite linear
+          cursor: pointer
+    ul
+      padding: 40px 0
+    li
+      list-style: none
+      margin-left: -20px
+  .about-section
+    max-width: 760px
+
+
 //
 //
 // Admin Input Page //
