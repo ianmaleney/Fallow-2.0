@@ -1,11 +1,10 @@
 // Search Button Function
-
-var searchButton = document.getElementById("search-button");
-var overlay = document.getElementById("search-overlay");
-
-function reveal(){
-  overlay.classList.toggle("visible");
-}
+$(document).ready(function() {
+  $("#search-button, .overlay-background").on( "click", function() {
+    console.log("Click!");
+    $("#search-overlay").toggleClass("visible");
+  });
+});
 
 // AJAX Loading for Initial Images
 $(function () {
@@ -16,13 +15,12 @@ $(function () {
       img.src = source + '-sm.jpg';
       img.srcset = source.concat('-mds.jpg 850w ,') + source.concat('-mls.jpg 850w ,') + source.concat('-l.jpg 1440w ,');
       img.alt = alt;
-      img.sizes = "(min-width: 850px) 50vw, 100vw"
+      img.sizes = "(min-width: 850px) 50vw, 100vw";
       $(element).prepend(img);
   });
 });
 
 // AJAX Loading for Extra Posts
-
 $(document).ready(function() {
   var page = 2;
 	// Each time the user scrolls

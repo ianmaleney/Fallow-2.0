@@ -21,6 +21,7 @@
   align-items: flex-end
   box-shadow: 0 5px 10px 0px $shadow-grey
   transition: box-shadow 0.2s linear
+  border: 2px solid white
   &:first-child
     // Full Width First Module
     width: calc(100% - 50px)
@@ -44,8 +45,10 @@
   @media #{$tiny}
     overflow: hidden
 
+
 .primary-image-wrapper
   position: relative
+  pointer-events: none
 
 .primary-module-link
   max-width: 60%
@@ -80,6 +83,9 @@
   max-width: 100%
   text-align: center
   text-transform: uppercase
+
+.gradient
+  pointer-events: none
 
 //
 // Search //
@@ -175,10 +181,13 @@
     flex-wrap: wrap
   .logo
     padding: 20px 10px 10px
+    flex-basis: 22.5%
     @media #{$medium-tablet}
-      padding: 15px 0
+      padding: 12px 0
       order: 2
-    svg
+      flex-basis: auto
+      margin-bottom: -10px
+    .footer-logo
       fill: none
       stroke-width: 8
       stroke: white
@@ -203,6 +212,7 @@
   justify-content: center
   align-items: flex-end
   text-transform: uppercase
+  flex-basis: 50%
   @media #{$medium-tablet}
     font-size: 0.75rem
     letter-spacing: 1px
@@ -215,6 +225,7 @@
     width: 90vw
     border-bottom: 1px solid $shadow-grey
     order: 1
+    flex-basis: auto
 
 
 .menu-item
@@ -234,19 +245,25 @@
   position: relative
   left: 0
   bottom: -3px
-  width: 0
+  width: 100%
   height: 2px
   background-color: $red
   content: ''
-  transition: width 0.3s
+  transform: scaleX(0)
+  transform-origin: center
+  transition: transform 0.3s
 
 .social
   display: flex
+  flex-basis: 25%
+  justify-content: flex-end
   @media #{$medium-tablet}
     order: 3
+    flex-basis: auto
+    justify-content: auto
   svg
-    height: 40px
-    width: 40px
+    height: 35px
+    width: 35px
     box-sizing: content-box
     fill: white
     padding: 0 10px
@@ -254,8 +271,8 @@
       fill: white
     @media #{$medium-tablet}
       padding: 8px
-      height: 40px
-      width: 40px
+      height: 32px
+      width: 32px
     @media #{$small-phone}
       height: 30px
       width: 30px
@@ -268,42 +285,55 @@
 
 //
 //
-// About Page //
+// Info Pages //
 //
 //
-.about-page-container
-  font-size: 1rem
-  line-height: 1.3rem
-  letter-spacing: 0.5px
+
+.info-page-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  .header-logo
+    padding: 20px 0 10px
+    @media #{$small-phone}
+      display: none
+    svg
+      fill: none
+      stroke-width: 6
+      stroke: $black
+      width: 120px
+      height: 120px
+      transform: stroke 1s ease-in
+      @media #{$small-phone}
+        transform: scale(0.7)
+      &:hover
+        stroke: $red
+        stroke-dasharray: 150
+        animation: dash 5s infinite linear
+        cursor: pointer
+
+.info-section
+  font-family: $body-text
+  font-size: 0.9rem
+  line-height: 1.5rem
   color: $black
-  padding: 50px 0 0 0
-  .contact-section
-    max-width: calc(100vw - 760px)
-    .logo
-      @media #{$medium-tablet}
-        padding: 15px 0
-        order: 2
-      svg
-        fill: none
-        stroke-width: 6
-        stroke: $black
-        width: 120px
-        height: 120px
-        transform: stroke 1s ease-in
-        @media #{$small-phone}
-          transform: scale(0.8)
-        &:hover
-          stroke: $red
-          stroke-dasharray: 150
-          animation: dash 5s infinite linear
-          cursor: pointer
-    ul
-      padding: 40px 0
-    li
-      list-style: none
-      margin-left: -20px
-  .about-section
-    max-width: 760px
+  border-top: 1px solid rgba(220,220,220, 1)
+  width: 90vw
+  max-width: 32rem
+  @media #{$small-phone}
+    border-top: none
+  p
+    a
+      color: $red
+      &:hover
+        text-decoration: underline
+
+
+.payment-button
+  margin-left: calc(50% - 125px)
+  box-shadow: 0 5px 8px -2px rgba(180,180,180, 1)
+  &:hover
+    box-shadow: 0 8px 12px -4px rgba(180,180,180,0.7)
 
 
 //
@@ -353,3 +383,12 @@
     color: rgba(251, 203, 82, 1)
     cursor: pointer
     box-shadow: 0 10px 10px -3px rgba(150,150,150, 0.6)
+
+//
+//
+// Search Results Page //
+//
+//
+.search-result
+  width: 100%
+  margin: 20px 0
