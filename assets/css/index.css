@@ -264,9 +264,7 @@ footer {
     transition: transform 0.3s linear;
     transition: transform 0.3s linear, -webkit-transform 0.3s linear;
     -o-object-fit: cover;
-       object-fit: cover;
-    -webkit-animation: pop-in 0.6s ease-in-out;
-            animation: pop-in 0.6s ease-in-out; }
+       object-fit: cover; }
     @supports not ((-o-object-fit: cover) or (object-fit: cover)) {
       .primary-module-image img {
         width: 0; } }
