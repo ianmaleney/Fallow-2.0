@@ -309,7 +309,7 @@ footer {
   @media only screen and (max-width: 850px) {
     .search-splash {
       height: calc(100vh - 160px); } }
-  .search-splash .overlay-background {
+  .search-splash #overlay-background {
     width: 100vw;
     height: 100vh;
     position: absolute;

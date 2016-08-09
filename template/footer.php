@@ -36,3 +36,17 @@
     </div>
   </div>
 </footer>
+<script>
+  // Search Button Function
+  var searchButton = document.getElementById("search-button");
+  var overlay = document.getElementById("search-overlay");
+  function toggle() {
+    overlay.classList.toggle("visible");
+  }
+  searchButton.addEventListener("click", function(){
+    toggle();
+  });
+  overlay.addEventListener("click", function(){
+    toggle();
+  });
+</script>

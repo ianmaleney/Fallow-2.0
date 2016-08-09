@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php include 'template/header.php';?>
+  <head>
+    <?php include 'template/header.php';?>
+  </head>
   <body>
     <div class="primary-container info-page-container">
       <?php include 'template/head-logo.php';?>
@@ -25,6 +27,5 @@
     <?php include 'template/searchbar.php';?>
     <!-- Footer -->
     <?php include 'template/footer.php';?>
-    <script src="assets/js/index.js"></script>
   </body>
 </html>

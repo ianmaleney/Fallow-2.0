@@ -1,4 +1,4 @@
-<head>
+
   <meta charset="utf-8">
   <title>Fallow Media - Creative Publishers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +12,4 @@
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="Fallow Media Latest Feed" href="http://fallowmedia.com/feed"/>
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="http://fallowmedia.com/favicon.ico"/>
   <link rel="icon" type="image/png" href="http://fallowmedia.com/favicon.png" />
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-</head>

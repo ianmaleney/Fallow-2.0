@@ -12,10 +12,6 @@ function lazy(){
 }
 
 $(document).ready(function() {
-  // Search Button Function
-  $("#search-button, .overlay-background").on( "click", function() {
-    $("#search-overlay").toggleClass("visible");
-  });
 
   // AJAX Loading for Initial Images
   $("[data-lazy-load-image]").css("animation", "pop-in 0.8s ease-in-out");

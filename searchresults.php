@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php include 'template/header.php';?>
+  <head>
+    <?php include 'template/header.php';?>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
   <body>
     <div class="primary-container info-page-container">
       <a href="/index.php" alt="Fallow Media" class="logo header-logo">

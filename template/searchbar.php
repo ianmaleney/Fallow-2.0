@@ -1,5 +1,5 @@
 <div id="search-overlay" class="search-splash">
-  <div class="overlay-background"></div>
+  <div id="overlay-background"></div>
   <div class="search-wrapper">
     <form id="search-form" action="/searchresults.php" method="get">
       <input class="search-text-area" type="text" aria-labelledby="search-form" placeholder="..." Name="keywords" autocomplete="off">

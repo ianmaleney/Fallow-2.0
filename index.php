@@ -1,7 +1,11 @@
 <?php include('config/setup.php');?>
 <!DOCTYPE html>
 <html lang="en">
-  <?php include 'template/header.php';?>
+  <head>
+    <?php include 'template/header.php';?>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
   <body>
     <div class="primary-container" id="posts">
       <!-- Home Modules -->
