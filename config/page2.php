@@ -1,7 +1,7 @@
 <?php
 include('setup.php');
 // Load Second Batch
-$load2 = "SELECT * FROM pages WHERE ID<(SELECT max(id)-10 FROM pages) ORDER by ID DESC LIMIT 9";
+$load2 = "SELECT * FROM pages WHERE ID<(SELECT max(id)-12 FROM pages) ORDER by ID DESC LIMIT 9";
 $results2 = mysqli_query($dbc, $load2);
 $posts2 = mysqli_fetch_assoc($results2);
 while($posts2 = mysqli_fetch_assoc($results2)){

@@ -40,13 +40,14 @@
   // Search Button Function
   var searchButton = document.getElementById("search-button");
   var overlay = document.getElementById("search-overlay");
+  var overlayBackground = document.getElementById("overlay-background");
   function toggle() {
     overlay.classList.toggle("visible");
   }
   searchButton.addEventListener("click", function(){
     toggle();
   });
-  overlay.addEventListener("click", function(){
+  overlayBackground.addEventListener("click", function(){
     toggle();
   });
 </script>

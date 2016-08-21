@@ -1,6 +1,6 @@
 <?php
 /* Attempt MySQL server connection. */
-$dbc = mysqli_connect('localhost', 'root', 'root', 'fallrdac_pages') OR die('Could Not Connect Because: '.mysqli_connect_error());
+$dbc = mysqli_connect('localhost', 'ian', 'Rebel4k_ha', 'fallrdac') OR die('Could Not Connect Because: '.mysqli_connect_error());
 
 
 // Escape user inputs for security

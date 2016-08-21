@@ -26,7 +26,7 @@ $(document).ready(function() {
 
         $(window).off('scroll');
 
-        var url = "/test/fallow2/config/page" + page + ".php";
+        var url = "/config/page" + page + ".php";
         var postbox = document.getElementById("posts");
 
         $.ajax({

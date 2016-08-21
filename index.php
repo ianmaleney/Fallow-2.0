@@ -16,8 +16,7 @@
         // Echo Out Latest Post
         echo
           '<div class="primary-module-wrapper">
-            <a href="' . $posts["body"] . '" target="_blank" class="primary-module-link">
-              <div class="primary-image-wrapper"></div>
+            <a href="' . $posts["body"] . '" target="_blank" class="primary-module-link" style="display: inline-block">
               <div class="primary-module-image" data-lazy-load-image="' . $posts["leadimage"] . '" data-alt="' . $posts["title"] .' ">
                 <noscript>
                   <img src="' . $posts["leadimage"] . '-mls.jpg">
