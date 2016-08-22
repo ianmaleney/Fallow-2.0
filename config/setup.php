@@ -4,9 +4,9 @@
 
 # Database Connection Here...
 
-$dbc = mysqli_connect('localhost', 'ian', 'Rebel4k_ha', 'fallrdac') OR die('Could Not Connect Because: '.mysqli_connect_error());
+$dbc = mysqli_connect('server', 'username', 'password', 'database') OR die('Could Not Connect Because: '.mysqli_connect_error());
 
 // Site Title
-$site_title = 'Fallow Media - Creative Publishers';
+$site_title = 'Site Title';
 
 ?>

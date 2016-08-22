@@ -1,2 +1,6 @@
 .codekit
 error_log
+.htaccess
+/build/*
+/admin/*
+.codekit-cache
